@@ -25,7 +25,8 @@ var express = require('express'),
 
 
 
-mongoose.connect("mongodb://localhost/firstadmindemo");
+//mongoose.connect("mongodb://localhost/firstadmindemo");
+mongoose.connect("mongodb://admin:sitansu@ds147377.mlab.com:47377/bootstrapadmin");
 
 // var storage = multer.diskStorage({
 //   destination: function (req, file, cb) {
