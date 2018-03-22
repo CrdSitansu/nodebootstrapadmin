@@ -24,7 +24,7 @@ var express = require('express'),
 
 
 
-
+const port = process.env.PORT || 3000;
 //mongoose.connect("mongodb://localhost/firstadmindemo");
 mongoose.connect("mongodb://admin:sitansu@ds147377.mlab.com:47377/bootstrapadmin");
 
@@ -521,16 +521,17 @@ app.delete("/deletimage/:id", function(req,res){
 
 
 
+app.listen(port);
+console.log(`App running on port ${port}`);
 
 
 
 
 
 
+// var server = app.listen(8081, function(){
 
-var server = app.listen(8081, function(){
-
-	var host = server.address().address;
-	var port = server.address().port;
-	console.log("Example app listening at http://%s:%s", host, port);
-});
+// 	var host = server.address().address;
+// 	var port = server.address().port;
+// 	console.log("Example app listening at http://%s:%s", host, port);
+// });
